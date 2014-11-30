@@ -1,0 +1,18 @@
+<div>
+  <div class="modal-header" ng-class="priorityStyle">
+    <h4 class="modal-title">{{ data.title || "Message" }}</h4>
+  </div>
+  <div class="modal-body">
+    <div>
+      <p ng-show="data.details">{{data.details}}</p>
+      <alert ng-repeat="msg in data.error" type="danger">{{msg.message}} - <em>{{msg.key}}</em>
+      </alert>
+      <alert ng-repeat="msg in data.info">{{msg.message}}</alert>
+    </div>
+    <div ng-transclude></div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="confirm()">{{confirmLabel || "ok"}}</button>
+    <button class="btn" ng-click="dismiss()" ng-show="showCancel">{{cancelLabel || "cancel"}}</button>
+  </div>
+</div>

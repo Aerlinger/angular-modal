@@ -1,0 +1,25 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css"/>
+  <link rel="stylesheet" type="text/css" href="dist/css/modal.css"/>
+
+  <script src="scripts/jquery-1.11.1.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/ui-bootstrap-tpls-0.12.0.min.js"></script>
+  <script type="text/javascript" src="app/app.js"></script>
+</head>
+<body>
+
+  <div ng-app="app" ng-controller="AppController">
+    <button ng-click="showPopup(true)">show foo</button>
+    <button ng-click="showPopup()">show test</button>
+  </div>
+
+  <button ng-click='toggleModal()'>Open Modal Dialog</button>
+  <modal-dialog show='modalShown' width='750px' height='90%'>
+    <p>Modal Content Goes here<p>
+  </modal-dialog>
+
+</body>
+</html>
